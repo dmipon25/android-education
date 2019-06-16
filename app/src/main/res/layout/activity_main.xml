@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,25 +9,119 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/counter"
+        android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2147483647"
+        android:textColor="#FF0000"
+        android:text="Я утверждаю, что это Овал!!!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/image_top"/>
+
+    <ImageView
+        android:id="@+id/image_top"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintCircle="@id/text2"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="88dp"/>
+
+    <ImageView
+        android:id="@+id/image_top_right"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintCircle="@id/text2"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="88dp"/>
+
+    <ImageView
+        android:id="@+id/image_top_left"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintCircle="@id/text2"
+        app:layout_constraintCircleAngle="315"
+        app:layout_constraintCircleRadius="88dp"/>
+
+    <ImageView
+        android:id="@+id/image_bottom"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintCircle="@id/text2"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="88dp"/>
+
+    <ImageView
+        android:id="@+id/image_bottom_right"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintCircle="@id/text2"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="88dp"/>
+
+    <ImageView
+        android:id="@+id/image_bottom_left"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintCircle="@id/text2"
+        app:layout_constraintCircleAngle="225"
+        app:layout_constraintCircleRadius="88dp"/>
+
+    <ImageView
+        android:id="@+id/image_start"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintCircle="@id/text2"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="124dp"/>
+
+    <ImageView
+        android:id="@+id/image_end"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintCircle="@id/text2"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircleRadius="124dp"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="КЕК"
+        android:textColor="#0000FF"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText
+        android:id="@+id/edit_text1"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:background="#A7A7FA"
+        android:hint="Введи свой вариант"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="#F5F5F5"
+        android:textColorHint="#4169E0"
+        android:textSize="16sp"
+        android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/image_bottom" />
 
-    <Button
-        android:id="@+id/increment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Increment"/>
-
-    <Button
-        android:id="@+id/decrement"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Decrement"/>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
